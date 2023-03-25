@@ -2,7 +2,7 @@
 lexicographically ordered 
 """
 
-def lexi_two(chac1, chac2)def lexi_two(chac1, chac2):
+def lexi_two(chac1, chac2):
     len_c1 = len(chac1)
     len_c2 = len(chac2)
     comp_tms = min([len_c1, len_c2])
