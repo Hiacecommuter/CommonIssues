@@ -28,4 +28,4 @@ def lexico(slist):
         if swap is False:
             break
         swap = False
-    return slist:
+    return slist
