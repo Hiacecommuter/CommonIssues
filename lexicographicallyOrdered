@@ -1,0 +1,31 @@
+"""
+lexicographically ordered 
+"""
+
+def lexi_two(chac1, chac2)def lexi_two(chac1, chac2):
+    len_c1 = len(chac1)
+    len_c2 = len(chac2)
+    comp_tms = min([len_c1, len_c2])
+    for i in range(0, comp_tms):
+        if ord(chac1[i])>ord(chac2[i]):
+            return True
+        elif ord(chac1[i])< ord(chac2[i]):
+            return False
+        elif ord(chac1[i]) == ord(chac2[i]):
+            pass
+    if len_c1< len_c2:
+        return False
+    else:
+        return True
+def lexico(slist):
+    len_slist = len(slist)
+    swap = False
+    while 1:
+        for i in range(0, len_slist-1):
+            if lexi_two(slist[i], slist[i+1]) is True:
+                slist[i], slist[i+1] = slist[i+1], slist[i]
+                swap = True
+        if swap is False:
+            break
+        swap = False
+    return slist:
