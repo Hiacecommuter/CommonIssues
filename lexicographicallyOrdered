@@ -1,5 +1,7 @@
 """
-lexicographically ordered 
+lexicographically ordered from scratch, using bubble sorting
+python uses sorted
+c uses strcmp or qsort
 """
 
 def lexi_two(chac1, chac2):
@@ -20,11 +22,13 @@ def lexi_two(chac1, chac2):
 def lexico(slist):
     len_slist = len(slist)
     swap = False
+    iter_control =0 # bubble sorting, after each iter, the top element of each iter is sorted in overall order.
     while 1:
-        for i in range(0, len_slist-1):
+        for i in range(0, len_slist-1 - iter_control):
             if lexi_two(slist[i], slist[i+1]) is True:
                 slist[i], slist[i+1] = slist[i+1], slist[i]
                 swap = True
+             iter_control -=1 
         if swap is False:
             break
         swap = False
